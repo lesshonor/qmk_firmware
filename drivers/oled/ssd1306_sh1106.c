@@ -243,6 +243,7 @@ void oled_clear(void) {
     memset(oled_buffer, 0, sizeof(oled_buffer));
     oled_cursor = &oled_buffer[0];
     oled_dirty  = OLED_ALL_BLOCKS_MASK;
+     printf("\nclear!\n\n");
 }
 
 static void calc_bounds(uint8_t update_start, uint8_t *cmd_array) {
@@ -357,6 +358,7 @@ void oled_set_cursor(uint8_t col, uint8_t line) {
 
     // Out of bounds?
     if (index >= OLED_MATRIX_SIZE) {
+         printf("set cursor: OH SHIT OOB!!!1");
         index = 0;
     }
 
@@ -396,6 +398,7 @@ void oled_advance_char(void) {
 
     // Did we go out of bounds
     if (nextIndex >= OLED_MATRIX_SIZE) {
+         printf("advance_char: OH SHIT OOB!!!1");
         nextIndex = 0;
     }
 
@@ -451,10 +454,14 @@ void oled_write_char(const char data, bool invert) {
 
 void oled_write(const char *data, bool invert) {
     const char *end = data + strlen(data);
-    while (data < end) {
+    printf("start addr: %p\n", data);
+    printf("len: %i\n", strlen(data));
+    while (data < end ) {
+    printf("%i ", *data);
         oled_write_char(*data, invert);
         data++;
     }
+    printf("\nend addr: %p\n", data);
 }
 
 void oled_write_ln(const char *data, bool invert) {
