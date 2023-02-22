@@ -24,8 +24,8 @@
 #define VENDOR_ID       0x45D4 // ID
 #define PRODUCT_ID      0x1001
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    MT
-#define PRODUCT         NCRH 
+#define MANUFACTURER    "MT"
+#define PRODUCT         "NCRH"
 #undef STM32_HSECLK
 #define STM32_HSECLK 8000000
 

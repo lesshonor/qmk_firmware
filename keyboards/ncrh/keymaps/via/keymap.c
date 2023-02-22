@@ -13,8 +13,8 @@ LAYOUT_ortho_6x18( \
 LAYOUT_ortho_6x18( \
     KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   RESET,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO, \
     KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO, \
-    HPT_ON,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,  \
-    HPT_TOG,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO, \
+    HF_ON,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,  \
+    HF_TOGG,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO, \
     KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,KC_NO,KC_VOLU,KC_NO,KC_NO,KC_NO,  \
     KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_MUTE,   KC_VOLD,KC_MPLY,KC_NO,KC_NO,KC_NO,KC_NO),
 
