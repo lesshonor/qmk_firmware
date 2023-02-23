@@ -16,7 +16,7 @@
 
 // 68keys.c
 
-#include "ncrh.h"
+#include "quantum.h"
 #define RCC_APB2Periph_GPIOB             ((uint32_t)0x00000008)
 #define RCC_APB2Periph_AFIO              ((uint32_t)0x00000001)
 void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
