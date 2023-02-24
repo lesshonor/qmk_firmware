@@ -1,4 +1,5 @@
 /* Copyright 2021 Mike Tsao
+ * Copyright 2023 Sergey Vlasov (@sigprof)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,53 +17,8 @@
 
 #include "quantum.h"
 
-#define GPIO_Remap_SWJ_Disable ((uint32_t)0x00300400) /*!< Full SWJ Disabled (JTAG-DP + SW-DP) */
-#define DBGAFR_SWJCFG_MASK ((uint32_t)0xF0FFFFFF)
-#define DBGAFR_LOCATION_MASK ((uint32_t)0x00200000)
-#define EVCR_PORTPINCONFIG_MASK ((uint16_t)0xFF80)
-#define LSB_MASK ((uint16_t)0xFFFF)
-#define DBGAFR_POSITION_MASK ((uint32_t)0x000F0000)
-#define DBGAFR_NUMBITS_MASK ((uint32_t)0x00100000)
-
-void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState) {
-    uint32_t tmp = 0x00, tmp1 = 0x00, tmpreg = 0x00, tmpmask = 0x00;
-
-    /* Check the parameters */
-    // assert_param(IS_GPIO_REMAP(GPIO_Remap));
-    // assert_param(IS_FUNCTIONAL_STATE(NewState));
-
-    if ((GPIO_Remap & 0x80000000) == 0x80000000) {
-        tmpreg = AFIO->MAPR2;
-    } else {
-        tmpreg = AFIO->MAPR;
-    }
-
-    tmpmask = (GPIO_Remap & DBGAFR_POSITION_MASK) >> 0x10;
-    tmp     = GPIO_Remap & LSB_MASK;
-
-    if ((GPIO_Remap & (DBGAFR_LOCATION_MASK | DBGAFR_NUMBITS_MASK)) == (DBGAFR_LOCATION_MASK | DBGAFR_NUMBITS_MASK)) {
-        tmpreg &= DBGAFR_SWJCFG_MASK;
-        AFIO->MAPR &= DBGAFR_SWJCFG_MASK;
-    } else if ((GPIO_Remap & DBGAFR_NUMBITS_MASK) == DBGAFR_NUMBITS_MASK) {
-        tmp1 = ((uint32_t)0x03) << tmpmask;
-        tmpreg &= ~tmp1;
-        tmpreg |= ~DBGAFR_SWJCFG_MASK;
-    } else {
-        tmpreg &= ~(tmp << ((GPIO_Remap >> 0x15) * 0x10));
-        tmpreg |= ~DBGAFR_SWJCFG_MASK;
-    }
-
-    if (NewState != DISABLE) {
-        tmpreg |= (tmp << ((GPIO_Remap >> 0x15) * 0x10));
-    }
-
-    if ((GPIO_Remap & 0x80000000) == 0x80000000) {
-        AFIO->MAPR2 = tmpreg;
-    } else {
-        AFIO->MAPR = tmpreg;
-    }
-}
-
 void board_init(void) {
-    GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable, ENABLE);
+    // A14 on this board is used as the Scroll Lock indicator, so SWD must be disabled
+    // h/t @sigprof for all the refactoring help here
+    AFIO->MAPR = (AFIO->MAPR & ~AFIO_MAPR_SWJ_CFG_Msk) | AFIO_MAPR_SWJ_CFG_DISABLE;
 }
