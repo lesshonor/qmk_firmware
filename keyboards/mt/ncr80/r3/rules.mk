@@ -6,6 +6,5 @@ OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 # As noted in the readme, it is possible to add a solenoid to this PCB.
 # This is left as an exercise to particularly enterprising readers,
-# as several required components have not been populated on the PCB
-# and nothing is known about the circuit.
+# as nothing is known about the intended circuit/part numbers.
 #HAPTIC_DRIVER += SOLENOID
