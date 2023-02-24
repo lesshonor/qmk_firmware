@@ -14,21 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// 68keys.c
-
 #include "quantum.h"
-#define RCC_APB2Periph_GPIOB ((uint32_t)0x00000008)
-#define RCC_APB2Periph_AFIO ((uint32_t)0x00000001)
-void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState) {
-    /* Check the parameters */
-    // assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
-    // assert_param(IS_FUNCTIONAL_STATE(NewState));
-    if (NewState != DISABLE) {
-        RCC->APB2ENR |= RCC_APB2Periph;
-    } else {
-        RCC->APB2ENR &= ~RCC_APB2Periph;
-    }
-}
+
 #define GPIO_Remap_SWJ_Disable ((uint32_t)0x00300400) /*!< Full SWJ Disabled (JTAG-DP + SW-DP) */
 #define DBGAFR_SWJCFG_MASK ((uint32_t)0xF0FFFFFF)
 #define DBGAFR_LOCATION_MASK ((uint32_t)0x00200000)
@@ -77,6 +64,5 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState) {
 }
 
 void board_init(void) {
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_AFIO, ENABLE);
     GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable, ENABLE);
 }
