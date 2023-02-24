@@ -4,7 +4,9 @@
 
 > Re-imagination of the classic rebranded Cherry G81-3000 by NCR
 
-Round 3 is hotswap-only with an optional solenoid. Bottom row layouts with 6.25u and 7u spacebars are supported along with ANSI and ISO.
+Round 3 is hotswap-only with no RGB or single-color LED support. Circuitry and some components are present on the PCB to support the addition of a solenoid, though no information about the circuit or necessary hardware has been provided by the manufacturer.
+
+Bottom row layouts with 6.25u and 7u spacebars are supported along with ANSI and ISO.
 
 * Keyboard Maintainer: [The QMK Community](https://github.com/qmk)
 * Hardware Supported: [NCR-80 R3 (APM32)](https://www.aliexpress.us/item/3256804856662074.html)

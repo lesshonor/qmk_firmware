@@ -12,7 +12,7 @@
         "command": true,
         "console": false,
         "extrakey": true,
-        "haptic": true,
+        "haptic": false,
         "mousekey": true,
         "nkro": false,
         "rgb_matrix": false,
