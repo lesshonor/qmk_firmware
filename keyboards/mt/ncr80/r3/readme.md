@@ -27,6 +27,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 Enter the bootloader in 3 ways:
 
 * **Bootmagic reset**: Hold down the top left key and plug in the keyboard. This will also clear the emulated EEPROM, so it is a good first step if the keyboard is misbehaving.
+* **Physical reset**: Near the MCU there are two square pads with a circle in the middle. This is an unpopulated footprint for a reset button. Short these two pads twice in quick succession.
 * **Keycode in layout**: Press the key mapped to `QK_BOOT`. In the pre-supplied keymaps it is on the second layer, replacing the F12 key.
 
 After entering the bootloader through one of the three methods above, the keyboard will appear as a USB mass storage device named `MT.KEY`. Copy the compiled `.uf2` file onto this device. The keyboard will reboot on completion with the new firmware loaded.
