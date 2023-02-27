@@ -1,4 +1,4 @@
-/* Copyright 2021 Mike Tsao
+/* Copyright 2022 MT
  * Copyright 2023 Sergey Vlasov (@sigprof)
  *
  * This program is free software: you can redistribute it and/or modify
