@@ -6,17 +6,11 @@
     "bootloader": "uf2boot",
     "diode_direction": "COL2ROW",
     "features": {
-        "audio": false,
-        "backlight": false,
         "bootmagic": true,
         "command": true,
-        "console": false,
         "extrakey": true,
-        "haptic": false,
         "mousekey": true,
-        "nkro": false,
-        "rgb_matrix": false,
-        "rgblight": false
+        "nkro": false
     },
     "indicators": {
         "caps_lock": "A8",
@@ -29,9 +23,6 @@
         "rows": ["A1", "A2", "A3", "A4", "A5", "A6"]
     },
     "processor": "STM32F103",
-    "tapping": {
-        "toggle": 2
-    },
     "usb": {
         "device_version": "0.0.1",
         "pid": "0x3001",
