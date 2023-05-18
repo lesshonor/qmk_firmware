@@ -16,9 +16,5 @@
 
 #pragma once
 
-/* SLIDER */
-#define POT_ENABLE
-
 /* RGB Default */
 # define RGB_MATRIX_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD
-
