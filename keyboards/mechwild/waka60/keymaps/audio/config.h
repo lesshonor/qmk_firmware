@@ -17,7 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define AUDIO_PIN B5
-#define AUDIO_PWM_DRIVER PWMD1
-#define AUDIO_PWM_CHANNEL 1
-#define AUDIO_STATE_TIMER GPTD4
+#define AUDIO_CLICKY
+// Board runs too fast to hear the startup song otherwise.
+#define AUDIO_INIT_DELAY

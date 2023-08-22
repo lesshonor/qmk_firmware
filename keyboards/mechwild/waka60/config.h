@@ -17,6 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define AUDIO_PIN B5
+#define AUDIO_PWM_DRIVER PWMD3
+#define AUDIO_PWM_CHANNEL 2
+#define AUDIO_PWM_PAL_MODE 2
+
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
