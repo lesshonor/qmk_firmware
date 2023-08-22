@@ -12,4 +12,6 @@ RGBLIGHT_ENABLE = yes        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes        # Encoder Enabled
 
+WS2812_DRIVER = pwm
+
 DEFAULT_FOLDER = mechwild/waka60/f401

@@ -24,6 +24,10 @@
 #undef STM32_I2C_I2C1_TX_DMA_STREAM
 #define STM32_I2C_I2C1_TX_DMA_STREAM        STM32_DMA_STREAM_ID(1, 7)
 
+// WS2812
+#undef STM32_PWM_USE_TIM5
+#define STM32_PWM_USE_TIM5                  TRUE
+
 // audio
 #undef STM32_PWM_USE_TIM3
 #define STM32_PWM_USE_TIM3                  TRUE
