@@ -85,6 +85,7 @@
         "vid": "0x6D77"
     },
     "ws2812": {
+        "driver": "pwm",
         "pin": "A1"
     },
     "layout_aliases": {
