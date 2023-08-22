@@ -6,7 +6,7 @@
         "default": {
             "clicky": false
         },
-        "driver": "pwm_software"
+        "driver": "pwm_hardware"
     },
     "diode_direction": "COL2ROW",
     "encoder": {
