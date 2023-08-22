@@ -21,6 +21,9 @@
 #undef STM32_I2C_USE_I2C1
 #define STM32_I2C_USE_I2C1 TRUE
 
+#undef STM32_I2C_I2C1_TX_DMA_STREAM
+#define STM32_I2C_I2C1_TX_DMA_STREAM        STM32_DMA_STREAM_ID(1, 7)
+
 // audio
 #undef STM32_PWM_USE_TIM3
 #define STM32_PWM_USE_TIM3                  TRUE
