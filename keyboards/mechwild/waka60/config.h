@@ -32,3 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+// If you don't want to use one of these, #undef it in your keymap.
+#define CAPS_LOCK_INDICATOR 0
+#define MODIFIER_INDICATOR 1
+#define LAYER_INDICATOR 2
