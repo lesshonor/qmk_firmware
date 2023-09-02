@@ -410,10 +410,6 @@ void keyboard_post_init_kb(void) {
 #ifdef POINTING_DEVICE_ENABLE
     pointing_device_set_cpi(dpi_array[keyboard_config.dpi_config]);
 #endif
-#ifdef RGBLIGHT_ENABLE
-    rgblight_toggle_noeeprom();     //double toggle post init removes the weirdness with rgb strips having a yellow first LED
-    rgblight_toggle_noeeprom();
-#endif
 #ifdef DYNAMIC_TAPPING_TERM_ENABLE
     tap_toggle();   // Need it to reevaluate this setting after initiating so that it is current after init
     tap_toggle();

@@ -89,6 +89,7 @@
         "term": 0
     },
     "ws2812": {
+        "driver": "pwm",
         "pin": "B5"
     },
     "build": {

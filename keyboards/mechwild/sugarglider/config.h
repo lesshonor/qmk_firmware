@@ -3,6 +3,15 @@
 
 #pragma once
 
+#define I2C1_CLOCK_SPEED 400000
+#define I2C1_DUTY_CYCLE FAST_DUTY_CYCLE_2
+
+#define WS2812_PWM_DRIVER PWMD3
+#define WS2812_PWM_CHANNEL 2
+#define WS2812_PWM_PAL_MODE 2
+#define WS2812_DMA_STREAM STM32_DMA1_STREAM2
+#define WS2812_DMA_CHANNEL 5
+
 /* Matrix COL and ROW definitions */
 #define MATRIX_ROWS 9
 #define MATRIX_COLS 6
