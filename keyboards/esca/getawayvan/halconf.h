@@ -21,17 +21,12 @@
 
 #pragma once
 
+#define HAL_USE_SPI TRUE
+
 #define HAL_USE_SERIAL_USB TRUE
-
-#define ADC_USE_WAIT FALSE
-
-#define ADC_USE_MUTUAL_EXCLUSION FALSE
 
 #define SERIAL_USB_BUFFERS_SIZE 256
 
 #define SPI_USE_WAIT FALSE
 
-#define SPI_USE_MUTUAL_EXCLUSION FALSE
-
 #include_next <halconf.h>
-
