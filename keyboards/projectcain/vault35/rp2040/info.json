@@ -1,0 +1,86 @@
+{
+    "bootloader": "rp2040",
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP5", "pin_b": "GP4"}
+        ]
+    },
+    "matrix_pins": {
+        "cols": ["GP0", "GP29", "GP17", "GP28", "GP27", "GP26", "GP25", "GP24", "GP3", "GP2", "GP6"],
+        "rows": ["GP7", "GP1", "GP23", "GP22"]
+    },
+    "processor": "RP2040",
+    "rgblight": {
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        },
+        "brightness_steps": 8,
+        "led_count": 63,
+        "saturation_steps": 8,
+        "sleep": true
+    },
+    "rgb_matrix": {
+        "animations": {
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "breathing": true,
+            "band_sat": true,
+            "band_val": true,
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "rainbow_moving_chevron": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "flower_blooming": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "pixel_rain": true,
+            "pixel_flow": true,
+            "pixel_fractal": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_multinexus": true,
+            "splash": true,
+            "multisplash": true,
+            "solid_splash": true,
+            "solid_multisplash": true
+        },
+        "center_point": [112, 40],
+        "driver": "ws2812",
+        "sat_steps": 8,
+        "val_steps": 8
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP16"
+    }
+}
