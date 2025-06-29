@@ -1,0 +1,86 @@
+{
+    "bootloader": "rp2040",
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP5", "pin_b": "GP4"}
+        ]
+    },
+    "matrix_pins": {
+        "cols": ["GP0", "GP29", "GP17", "GP28", "GP27", "GP26", "GP25", "GP24", "GP3", "GP2", "GP6"],
+        "rows": ["GP7", "GP1", "GP23", "GP22"]
+    },
+    "processor": "RP2040",
+    "rgb_matrix": {
+        "animations": {
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_sat": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "band_val": true,
+            "breathing": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "cycle_up_down": true,
+            "digital_rain": true,
+            "dual_beacon": true,
+            "flower_blooming": true,
+            "gradient_left_right": true,
+            "gradient_up_down": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "jellybean_raindrops": true,
+            "multisplash": true,
+            "pixel_flow": true,
+            "pixel_fractal": true,
+            "pixel_rain": true,
+            "rainbow_beacon": true,
+            "rainbow_moving_chevron": true,
+            "rainbow_pinwheels": true,
+            "raindrops": true,
+            "solid_multisplash": true,
+            "solid_reactive": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_multinexus": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_simple": true,
+            "solid_reactive_wide": true,
+            "solid_splash": true,
+            "splash": true,
+            "typing_heatmap": true
+        },
+        "center_point": [112, 40],
+        "driver": "ws2812",
+        "sat_steps": 8,
+        "val_steps": 8
+    },
+    "rgblight": {
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        },
+        "brightness_steps": 8,
+        "led_count": 63,
+        "saturation_steps": 8,
+        "sleep": true
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP16"
+    }
+}
